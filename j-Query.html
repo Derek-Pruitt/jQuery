@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .move {
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+            width: 250px;
+            height: 400px;
+        }
+        img {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="move">
+    <img src="./image/outerspace.jpg" alt="View from outer space" style="width: 250px; height: 400px;">
+    </div>
+    <button id="toggle">slideToggle</button>
+    <script>
+        var $move = $(".move");
+
+        $("#toggle").on('click',function(){
+            $move.stop().slideToggle(4000);
+        });
+
+        $(".move").animate({height:"800px",width:"500px"},2000);
+        $("img").animate({height:"800px",width:"500px"},2000);
+
+
+    </script>
+    
+</body>
+</html>
